@@ -11,8 +11,8 @@ package ESport;
 public class Principal {
     public static void main(String[] args) {
         
-        Jugador jugador1= new Jugador("Julian", "no binario", 1, 22);
-        Jugador jugador2= new Jugador("Pancho", "Hombre", 2, 32);
+        Jugador jugador1= new Jugador("Juliano", "20529998k", "macho", 1,23);
+        Jugador jugador2= new Jugador("Pancho","179955326", "Hombre", 2, 32);
         
         Equipo EquipoLol=new Equipo();
         
