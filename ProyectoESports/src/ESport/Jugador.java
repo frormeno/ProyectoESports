@@ -7,14 +7,15 @@ package ESport;
  */
 public class Jugador {
     
-    private String nombre,sexo;
-    private int id, edad;
+    private String nombre,rut,sexo;
+    private int id,edad;
 
     public Jugador() {
     }
 
-    public Jugador(String nombre, String sexo, int id, int edad) {
+    public Jugador(String nombre, String rut, String sexo, int id, int edad) {
         this.nombre = nombre;
+        this.rut = rut;
         this.sexo = sexo;
         this.id = id;
         this.edad = edad;
@@ -26,6 +27,14 @@ public class Jugador {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getRut() {
+        return rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
     }
 
     public String getSexo() {
@@ -54,8 +63,11 @@ public class Jugador {
 
     @Override
     public String toString() {
-        return "Jugador{" + "nombre=" + nombre + ", sexo=" + sexo + ", id=" + id + ", edad=" + edad + '}';
+        return "Jugador{" + "nombre=" + nombre + ", rut=" + rut + ", sexo=" + sexo + ", id=" + id + ", edad=" + edad + '}';
     }
+    
+    
+    
 
     
     
