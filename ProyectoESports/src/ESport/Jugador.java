@@ -67,5 +67,16 @@ public class Jugador {
     public String toString() {
         return "Jugador{" + "nombre=" + nombre + ", rut=" + rut + ", sexo=" + sexo + ", id=" + id + ", edad=" + edad + '}';
     }
-
+    
+        public void imprimirDetalles(){
+        System.out.println(
+                "ID: " + id + "\n" +
+                "Nombre: " + nombre + "\n" +
+                "Rut: " + rut + "\n" +
+                "Sexo: " + sexo + "\n" +
+                "Edad: " + edad + "\n" 
+        );
+    }
+    
+    
 }

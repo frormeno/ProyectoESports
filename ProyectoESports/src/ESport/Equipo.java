@@ -15,11 +15,18 @@ public class Equipo {
     String nombre;
     ArrayList<Jugador> EquipoLol;
 
+    public Equipo() {
+    }
+    
+    
+
     public Equipo(String nombre) {
         this.nombre = nombre;
         EquipoLol = new ArrayList<Jugador>();
 
     }
+
+
 
     public boolean agregarJugador(Jugador jugador) {
         return EquipoLol.add(jugador);
@@ -40,4 +47,7 @@ public class Equipo {
             System.out.println(" - " + jugador.nombre + " (ID: "+ jugador.id + " / Rut: " + jugador.rut+" / Sexo: "+ jugador.sexo + " / Edad: " + jugador.edad + ")");
         }
     }
+
+
+    
 }
