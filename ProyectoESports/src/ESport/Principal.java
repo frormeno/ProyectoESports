@@ -1,5 +1,6 @@
 package ESport;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -10,17 +11,18 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Jugador jugador1 = new Jugador("Juliano", "20529998-k", "Colo-colo", 1, 23);
-        Jugador jugador2 = new Jugador("Pancho", "17995532-6", "Varon", 2, 32);
+//        Jugador jugador1 = new Jugador("Juliano", "20529998-k", "Colo-colo", 1, 23);
+//        Jugador jugador2 = new Jugador("Pancho", "17995532-6", "Varon", 2, 32);
 
-        Equipo EquipoLol = new Equipo("Los Cabros");
 
-        EquipoLol.agregarJugador(jugador2);
-        EquipoLol.agregarJugador(jugador1);
-        EquipoLol.listarJugador();
-        EquipoLol.mostrarEquipo();
+//        ArrayList<Equipo> equipos = new ArrayList<>();
 
-        String nombre;
+//        EquipoLol.agregarJugador(jugador2);
+//        EquipoLol.agregarJugador(jugador1);
+//        Jugadores.listarJugador();
+//        Jugadores.mostrarEquipo();
+
+        String nombre, nombreEquipo;
         String rut, sexo;
         int id;
         int edad;
@@ -42,7 +44,7 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
-                    EquipoLol.mostrarEquipo();
+                    equi.mostrarEquipo();
                     break;
                 case 2:
                     System.out.println("Ingrese Nombre y apellido");
@@ -57,12 +59,18 @@ public class Principal {
                     jug.setRut(rut);
                     jug.setSexo(sexo);
                     jug.setEdad(edad);
-                    EquipoLol.agregarJugador(jug);
+                    Jugad
                     
                     break;
-//                case 3:
-//                    Biblioteca.actualizarLibro();
-//                    break;
+                case 3:
+                    System.out.print("Ingrese el nombre del equipo: ");
+                    nombreEquipo = print.next();
+                    equipos.add(new Equipo(nombreEquipo));
+                    System.out.println("Equipo creado \n");
+                    for (Equipo equipo : equipos) {
+                        System.out.println(equipo.nombre);
+                    }
+                    break;
 //                case 4:
 //                    Biblioteca.eliminarLibro();
 //                    break;

@@ -13,41 +13,37 @@ import java.util.ArrayList;
 public class Equipo {
 
     String nombre;
-    ArrayList<Jugador> EquipoLol;
+    ArrayList<Jugador> Jugadores;
+    ArrayList<Equipo> equipos = new ArrayList<>();
 
     public Equipo() {
     }
-    
-    
 
     public Equipo(String nombre) {
         this.nombre = nombre;
-        EquipoLol = new ArrayList<Jugador>();
+        Jugadores = new ArrayList<Jugador>();
 
     }
 
-
-
     public boolean agregarJugador(Jugador jugador) {
-        return EquipoLol.add(jugador);
+        return Jugadores.add(jugador);
 
     }
 
     public void listarJugador() {
-        for (Jugador jugador : EquipoLol) {
+        for (Jugador jugador : Jugadores) {
             System.out.println(jugador);
         }
     }
-    
-    public void mostrarEquipo() {
-        System.out.println("Equipo: " + nombre);
-        System.out.println("Jugadores:");
 
-        for (Jugador jugador : EquipoLol) {
-            System.out.println(" - " + jugador.nombre + " (ID: "+ jugador.id + " / Rut: " + jugador.rut+" / Sexo: "+ jugador.sexo + " / Edad: " + jugador.edad + ")");
+    public void mostrarEquipo() {
+        for (Equipo equipo : equipos) {
+            System.out.println(equipo.nombre);
+        }
+
+        for (Jugador jugador : Jugadores) {
+            System.out.println(" - " + jugador.nombre + " (ID: " + jugador.id + " / Rut: " + jugador.rut + " / Sexo: " + jugador.sexo + " / Edad: " + jugador.edad + ")");
         }
     }
 
-
-    
 }
