@@ -1,4 +1,3 @@
-
 package ESport;
 
 /**
@@ -6,9 +5,12 @@ package ESport;
  * @author fgom9
  */
 public class Jugador {
-    
-    private String nombre,rut,sexo;
-    private int id,edad;
+
+    String nombre;
+
+    String rut, sexo;
+    int id;
+    int edad;
 
     public Jugador() {
     }
@@ -65,12 +67,5 @@ public class Jugador {
     public String toString() {
         return "Jugador{" + "nombre=" + nombre + ", rut=" + rut + ", sexo=" + sexo + ", id=" + id + ", edad=" + edad + '}';
     }
-    
-    
-    
 
-    
-    
-    
-    
 }
