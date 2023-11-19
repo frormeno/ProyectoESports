@@ -22,6 +22,8 @@ public class Principal {
 //        Jugadores.listarJugador();
 //        Jugadores.mostrarEquipo();
 
+        Equipo Jugadores= new Equipo();
+
         String nombre, nombreEquipo;
         String rut, sexo;
         int id;
@@ -59,17 +61,16 @@ public class Principal {
                     jug.setRut(rut);
                     jug.setSexo(sexo);
                     jug.setEdad(edad);
-                    Jugad
+                    Jugadores.agregarJugador(jug);
                     
                     break;
                 case 3:
                     System.out.print("Ingrese el nombre del equipo: ");
                     nombreEquipo = print.next();
-                    equipos.add(new Equipo(nombreEquipo));
+                    equi.setNombreEquipo(nombreEquipo);
+                    equi.agregarEquipo(equi);
                     System.out.println("Equipo creado \n");
-                    for (Equipo equipo : equipos) {
-                        System.out.println(equipo.nombre);
-                    }
+                    
                     break;
 //                case 4:
 //                    Biblioteca.eliminarLibro();
