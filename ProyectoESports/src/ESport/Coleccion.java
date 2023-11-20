@@ -10,7 +10,8 @@ import java.util.Scanner;
 public class Coleccion {
 
     ArrayList<Jugador> Jugadores=new ArrayList <>();
-    ArrayList<Equipo> equipos=new ArrayList <>();
+    ArrayList<Equipo> equipos = new ArrayList<>();
+
 
     public Coleccion() {
     }
@@ -59,7 +60,11 @@ public class Coleccion {
         return Jugadores.add(jugador);
 
     }
-
+    
+public void asignarJugadorAEquipo(Jugador jugador, Equipo equipo) {
+    Jugadores.remove(jugador);
+    equipo.agregarJugador(jugador);
+}
     public void listarJugador() {
         for (Jugador jugador : Jugadores) {
             System.out.println(jugador);
@@ -81,6 +86,9 @@ public class Coleccion {
         return equipos.add(new Equipo(nombreEquipo));
     }
     
+    public boolean agregarJugadorEquipo(Jugador jugador){
+        return Jugadores.add(jugador);
+    }
    
 //    public boolean asignarJugadorEquipo(Jugador jugador){
 //        return equipos.add(Jugadores);
