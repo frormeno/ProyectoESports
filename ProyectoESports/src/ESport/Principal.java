@@ -23,7 +23,7 @@ public class Principal {
 //        Jugadores.mostrarEquipo();
 
         Equipo Jugadores= new Equipo();
-
+        Coleccion col =new Coleccion();
         String nombre, nombreEquipo;
         String rut, sexo;
         int id;
@@ -46,38 +46,29 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
-                    equi.mostrarEquipo();
+                    col.mostrarEquipo();
                     break;
                 case 2:
-                    System.out.println("Ingrese Nombre y apellido");
-                    nombre = print.next();
-                    System.out.println("Ingrese rut");
-                    rut = print.next();
-                    System.out.println("Ingrese sexo");
-                    sexo=print.next();
-                    System.out.println("Ingrese edad");
-                    edad=print.nextInt();
-                    jug.setNombre(nombre);
-                    jug.setRut(rut);
-                    jug.setSexo(sexo);
-                    jug.setEdad(edad);
-                    Jugadores.agregarJugador(jug);
+                    col.agregarJugador(jug);
                     
                     break;
                 case 3:
                     System.out.print("Ingrese el nombre del equipo: ");
                     nombreEquipo = print.next();
                     equi.setNombreEquipo(nombreEquipo);
-                    equi.agregarEquipo(equi);
+                    col.agregarEquipo(equi, nombreEquipo);
                     System.out.println("Equipo creado \n");
                     
                     break;
-//                case 4:
-//                    Biblioteca.eliminarLibro();
-//                    break;
-//                case 5:
-//                    System.out.println("¡Hasta pronto!");
-//                    System.exit(0);
+                case 4:
+                    
+                    break;
+                case 5:
+                    col.mostrarEquipo();
+                    break;
+                case 6:
+                    System.out.println("¡Hasta pronto!");
+                    System.exit(0);
 //                default:
 //                    System.out.println("Opción no válida.");
             }

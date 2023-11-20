@@ -6,11 +6,11 @@ package ESport;
  */
 public class Jugador {
 
-    String nombre;
-
-    String rut, sexo;
-    int id;
-    int edad;
+    private String nombre;
+    private String rut, sexo;
+    private int id;
+    private int edad;
+ 
 
     public Jugador() {
     }
