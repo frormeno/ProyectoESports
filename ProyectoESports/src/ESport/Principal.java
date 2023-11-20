@@ -56,7 +56,7 @@ public class Principal {
                     System.out.print("Ingrese el nombre del equipo: ");
                     nombreEquipo = print.next();
                     equi.setNombreEquipo(nombreEquipo);
-                    col.agregarEquipo(equi, nombreEquipo);
+                    col.agregarEquipo(nombreEquipo);
                     System.out.println("Equipo creado \n");
                     
                     break;

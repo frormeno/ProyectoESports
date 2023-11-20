@@ -77,10 +77,11 @@ public class Coleccion {
 //        }
     }
 
-    public boolean agregarEquipo(Equipo equipo, String nombreEquipo) {
+    public boolean agregarEquipo(String nombreEquipo) {
         return equipos.add(new Equipo(nombreEquipo));
     }
     
+   
 //    public boolean asignarJugadorEquipo(Jugador jugador){
 //        return equipos.add(Jugadores);
 //    }
