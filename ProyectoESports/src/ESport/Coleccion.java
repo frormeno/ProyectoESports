@@ -44,30 +44,32 @@ public class Coleccion {
     Jugador jug = new Jugador();
     Scanner print = new Scanner(System.in);
 
-    public boolean agregarJugador(Jugador jugador) {
-        System.out.println("Ingrese Nombre y apellido");
-        String nombre = print.next();
-        System.out.println("Ingrese rut");
-        String rut = print.next();
-        System.out.println("Ingrese sexo");
-        String sexo = print.next();
-        System.out.println("Ingrese edad");
-        int edad = print.nextInt();
-        jug.setNombre(nombre);
-        jug.setRut(rut);
-        jug.setSexo(sexo);
-        jug.setEdad(edad);
-        return Jugadores.add(jugador);
+public boolean agregarJugador(Jugador jugador) {
+    Scanner print = new Scanner(System.in);
 
-    }
+    System.out.println("Ingrese Nombre y apellido");
+    String nombre = print.next();
+    
+    System.out.println("Ingrese rut");
+    String rut = print.next();
+    
+    System.out.println("Ingrese sexo");
+    String sexo = print.next();
+    
+    System.out.println("Ingrese edad");
+    int edad = print.nextInt();
+
+    jugador = new Jugador(nombre, rut, sexo, 0, edad);
+    return Jugadores.add(jugador);
+}
     
 public void asignarJugadorAEquipo(Jugador jugador, Equipo equipo) {
     Jugadores.remove(jugador);
     equipo.agregarJugador(jugador);
 }
     public void listarJugador() {
-        for (Jugador jugador : Jugadores) {
-            System.out.println(jugador);
+        for (Jugador Jugadore : Jugadores) {
+            System.out.println(Jugadore);
         }
     }
 
