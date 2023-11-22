@@ -101,19 +101,25 @@ public class Metodo {
         String nombreJugador = scanner.nextLine();
         System.out.print("Primer apellido del jugador: ");
         String apellidoJugador = scanner.nextLine();
-        System.out.print("Ingrese el rut del jugador sin puntos ni guión(111111111): ");
+        System.out.print("Edad del jugador: ");
+        int edad = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Ingrese el rut del jugador sin puntos ni guión: ");
         String rut = scanner.nextLine();
-        System.out.print("Indique genero (F/M): ");
-        String sexo = scanner.nextLine();
+        
+        
+//        System.out.print("Indique genero (F/M): ");
+//        String sexo = scanner.nextLine();
         
 
         try (Connection connection = Conexion.obtenerConexion()) {
-            String sql = "INSERT INTO EQUIPO (ID_JUGADOR, NOMBRE_JUGADOR,APPATERNO_JUGADOR,RUT_JUGADOR,SEXO) VALUES (SEQ_JUGADOR.NEXTVAL, ?, ?, ?, ?)";
+            String sql = "INSERT INTO JUGADOR (ID_JUGADOR, NOMBRE_JUGADOR,APPATERNO_JUGADOR,EDAD_JUGADOR,RUT_JUGADOR) VALUES (SEQ_JUGADOR.NEXTVAL, ?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, nombreJugador);
             statement.setString(2, apellidoJugador);
-            statement.setString(3, rut);
-            statement.setString(4, sexo);
+            statement.setInt(3, edad);
+            statement.setString(4, rut);            
+            
             statement.executeUpdate();
 
             System.out.println("Jugador añadido correctamente.");
