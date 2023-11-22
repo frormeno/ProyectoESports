@@ -11,7 +11,7 @@ import java.util.Properties;
  */
 public class Conexion {
 
-    private static final String WALLET_PATH = "C:/Users/fgom9/OneDrive/Desktop/Wallet_DBESport";
+    private static final String WALLET_PATH = "C:/Users/Julian/Downloads/Wallet_DBESport";
     private static final String WALLET_PASSWORD = "Py4fe0mg.1812";
     private static final String JDBC_URL = "jdbc:oracle:thin:@dbesport_high";// - REEMPLAZA 'testdb_high' EN EL ARCHIVO TNSNAMES.ORA APARECE AL INICIO [NOMBRE DE LA DB]_HIGH";
 
