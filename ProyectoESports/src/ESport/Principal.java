@@ -9,30 +9,19 @@ import java.util.Scanner;
  */
 public class Principal {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-//        Jugador jugador1 = new Jugador("Juliano", "20529998-k", "Colo-colo", 1, 23);
-//        Jugador jugador2 = new Jugador("Pancho", "17995532-6", "Varon", 2, 32);
-//        ArrayList<Equipo> equipos = new ArrayList<>();
-//        EquipoLol.agregarJugador(jugador2);
-//        EquipoLol.agregarJugador(jugador1);
-//        Jugadores.listarJugador();
-//        Jugadores.mostrarEquipo();
-        Equipo Jugadores = new Equipo();
-        Coleccion col = new Coleccion();
-        String nombre, nombreEquipo, asignado, equipoEleccion;
-        String rut, sexo;
-        int id;
-        int edad;
 
+        
         Equipo equi = new Equipo();
+        Metodo met = new Metodo();
         Scanner print = new Scanner(System.in);
         Jugador jug = new Jugador();
         while (true) {
             System.out.println("ESport");
-            System.out.println("1. Ver Equipos");
-            System.out.println("2. Agregar Jugadores");
-            System.out.println("3. Agregar Equipo");
+            System.out.println("1. Crear equipo");
+            System.out.println("2. Crear Jugador");
+            System.out.println("3. Modificar equipo");
             System.out.println("4. Agregar jugadores a equipo");
             System.out.println("5. Listar equipos");
             System.out.println("6. Salir");
@@ -40,22 +29,17 @@ public class Principal {
             int opcion = print.nextInt();
             print.nextLine();
 
-//            switch (opcion) {
-//                case 1:
-//                    col.mostrarEquipo();
-//                    break;
-//                case 2:
-//                    col.agregarJugador(jug);
-//
-//                    break;
-//                case 3:
-//                    System.out.print("Ingrese el nombre del equipo: ");
-//                    nombreEquipo = print.next();
-//                    equi.setNombreEquipo(nombreEquipo);
-//                    col.agregarEquipo(nombreEquipo);
-//                    System.out.println("Equipo creado \n");
-//
-//                    break;
+            switch (opcion) {
+                case 1:
+                    met.agregarEquipo();
+                    break;
+                case 2:
+                    met.agregarJugador();
+                    break;
+                case 3:
+                    met.actualizarEquipo();
+
+                    break;
 //                case 4:
 //
 //                    col.listarJugador();
@@ -95,8 +79,8 @@ public class Principal {
 //                    System.exit(0);
 //                default:
 //                    System.out.println("Opción no válida.");
-            }
-        }
+//            }
+//        }
     }
-
-
+         }    
+ } }

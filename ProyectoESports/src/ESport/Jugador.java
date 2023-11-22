@@ -6,7 +6,7 @@ package ESport;
  */
 public class Jugador {
 
-    private String nombre;
+    private String nombre,apellidoPaterno;
     private String rut, sexo;
     private int idJugador;
     private int edad;
@@ -14,8 +14,9 @@ public class Jugador {
     public Jugador() {
     }
 
-    public Jugador(String nombre, String rut, String sexo, int idJugador, int edad) {
+    public Jugador(String nombre, String apellidoPaterno, String rut, String sexo, int idJugador, int edad) {
         this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
         this.rut = rut;
         this.sexo = sexo;
         this.idJugador = idJugador;
@@ -28,6 +29,14 @@ public class Jugador {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
+    }
+
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
     }
 
     public String getRut() {
@@ -64,8 +73,10 @@ public class Jugador {
 
     @Override
     public String toString() {
-        return "Jugador{" + "nombre=" + nombre + ", rut=" + rut + ", sexo=" + sexo + ", idJugador=" + idJugador + ", edad=" + edad + '}';
+        return "Jugador{" + "nombre=" + nombre + ", apellidoPaterno=" + apellidoPaterno + ", rut=" + rut + ", sexo=" + sexo + ", idJugador=" + idJugador + ", edad=" + edad + '}';
     }
+
+    
 
     
     
