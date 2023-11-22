@@ -8,18 +8,17 @@ public class Jugador {
 
     private String nombre;
     private String rut, sexo;
-    private int id;
+    private int idJugador;
     private int edad;
- 
 
     public Jugador() {
     }
 
-    public Jugador(String nombre, String rut, String sexo, int id, int edad) {
+    public Jugador(String nombre, String rut, String sexo, int idJugador, int edad) {
         this.nombre = nombre;
         this.rut = rut;
         this.sexo = sexo;
-        this.id = id;
+        this.idJugador = idJugador;
         this.edad = edad;
     }
 
@@ -47,12 +46,12 @@ public class Jugador {
         this.sexo = sexo;
     }
 
-    public int getId() {
-        return id;
+    public int getIdJugador() {
+        return idJugador;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdJugador(int idJugador) {
+        this.idJugador = idJugador;
     }
 
     public int getEdad() {
@@ -65,12 +64,14 @@ public class Jugador {
 
     @Override
     public String toString() {
-        return "Jugador{" + "nombre=" + nombre + ", rut=" + rut + ", sexo=" + sexo + ", id=" + id + ", edad=" + edad + '}';
+        return "Jugador{" + "nombre=" + nombre + ", rut=" + rut + ", sexo=" + sexo + ", idJugador=" + idJugador + ", edad=" + edad + '}';
     }
+
+    
     
         public void imprimirDetalles(){
         System.out.println(
-                "ID: " + id + "\n" +
+                "ID: " + idJugador + "\n" +
                 "Nombre: " + nombre + "\n" +
                 "Rut: " + rut + "\n" +
                 "Sexo: " + sexo + "\n" +

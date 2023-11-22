@@ -40,63 +40,63 @@ public class Principal {
             int opcion = print.nextInt();
             print.nextLine();
 
-            switch (opcion) {
-                case 1:
-                    col.mostrarEquipo();
-                    break;
-                case 2:
-                    col.agregarJugador(jug);
-
-                    break;
-                case 3:
-                    System.out.print("Ingrese el nombre del equipo: ");
-                    nombreEquipo = print.next();
-                    equi.setNombreEquipo(nombreEquipo);
-                    col.agregarEquipo(nombreEquipo);
-                    System.out.println("Equipo creado \n");
-
-                    break;
-                case 4:
-
-                    col.listarJugador();
-                    System.out.println("Ingrese el nombre del jugador que desea asignar a un equipo: ");
-                    String nombreJugador = print.next();
-
-                    Jugador eleccionJugador = null;
-                    for (Jugador jugador : col.getJugadores()) {
-                        if (jugador.getNombre() == nombreJugador) {
-                            eleccionJugador = jugador;
-                            System.out.println("Jugador seleccionado" + jugador);
-                            break;
-                        }
-                    }
-
-                    col.mostrarEquipo();
-                    System.out.println("Ingrese el nombre del equipo al que desea asignar el jugador: ");
-                    String equipoNombre = print.next();
-
-                    Equipo eleccionEquipo = null;
-                    for (Equipo equipo : col.getEquipos()) {
-                        if (equipo.getNombreEquipo().equals(equipoNombre)) {
-                            eleccionEquipo = equipo;
-
-                            col.asignarJugadorAEquipo(eleccionJugador, eleccionEquipo);
-                            System.out.println("Jugador asignado al equipo correctamente.");
-                            break;
-                        }
-                    }
-                    break;
-
-                case 5:
-                    col.mostrarEquipo();
-                    break;
-                case 6:
-                    System.out.println("¡Hasta pronto!");
-                    System.exit(0);
+//            switch (opcion) {
+//                case 1:
+//                    col.mostrarEquipo();
+//                    break;
+//                case 2:
+//                    col.agregarJugador(jug);
+//
+//                    break;
+//                case 3:
+//                    System.out.print("Ingrese el nombre del equipo: ");
+//                    nombreEquipo = print.next();
+//                    equi.setNombreEquipo(nombreEquipo);
+//                    col.agregarEquipo(nombreEquipo);
+//                    System.out.println("Equipo creado \n");
+//
+//                    break;
+//                case 4:
+//
+//                    col.listarJugador();
+//                    System.out.println("Ingrese el nombre del jugador que desea asignar a un equipo: ");
+//                    String nombreJugador = print.next();
+//
+//                    Jugador eleccionJugador = null;
+//                    for (Jugador jugador : col.getJugadores()) {
+//                        if (jugador.getNombre() == nombreJugador) {
+//                            eleccionJugador = jugador;
+//                            System.out.println("Jugador seleccionado" + jugador);
+//                            break;
+//                        }
+//                    }
+//
+//                    col.mostrarEquipo();
+//                    System.out.println("Ingrese el nombre del equipo al que desea asignar el jugador: ");
+//                    String equipoNombre = print.next();
+//
+//                    Equipo eleccionEquipo = null;
+//                    for (Equipo equipo : col.getEquipos()) {
+//                        if (equipo.getNombreEquipo().equals(equipoNombre)) {
+//                            eleccionEquipo = equipo;
+//
+//                            col.asignarJugadorAEquipo(eleccionJugador, eleccionEquipo);
+//                            System.out.println("Jugador asignado al equipo correctamente.");
+//                            break;
+//                        }
+//                    }
+//                    break;
+//
+//                case 5:
+//                    col.mostrarEquipo();
+//                    break;
+//                case 6:
+//                    System.out.println("¡Hasta pronto!");
+//                    System.exit(0);
 //                default:
 //                    System.out.println("Opción no válida.");
             }
         }
     }
 
-}
+

@@ -40,7 +40,7 @@ public class Coleccion {
     }
     
     
-
+    Equipo equi =new Equipo();
     Jugador jug = new Jugador();
     Scanner print = new Scanner(System.in);
 
@@ -59,38 +59,39 @@ public boolean agregarJugador(Jugador jugador) {
     System.out.println("Ingrese edad");
     int edad = print.nextInt();
 
-    jugador = new Jugador(nombre, rut, sexo, 0, edad);
+    jugador = new Jugador(nombre, rut, sexo, edad, edad);
     return Jugadores.add(jugador);
 }
     
-public void asignarJugadorAEquipo(Jugador jugador, Equipo equipo) {
-    Jugadores.remove(jugador);
-    equipo.agregarJugador(jugador);
-}
+//public void asignarJugadorAEquipo(Jugador jugador, Equipo equipo) {
+//    Jugadores.remove(jugador);
+//    equipo.agregarJugador(jugador);
+//}
     public void listarJugador() {
         for (Jugador Jugadore : Jugadores) {
             System.out.println(Jugadore);
         }
     }
 
-    public void mostrarEquipo() {
-        System.out.println("Los equipos son:");
-        for (Equipo equipo : equipos) {
-            System.out.println(equipo.nombreEquipo);
-        }
-
-//        for (Jugador jugador : Jugadores) {
-//            System.out.println(" - " + jugador.nombre + " (ID: " + jugador.id + " / Rut: " + jugador.rut + " / Sexo: " + jugador.sexo + " / Edad: " + jugador.edad + ")");
+//    public void mostrarEquipo() {
+//        System.out.println("Los equipos son:");
+//        for (Equipo equipo : equipos) {
+//            System.out.println(equipo.nombreEquipo);
 //        }
-    }
 
-    public boolean agregarEquipo(String nombreEquipo) {
-        return equipos.add(new Equipo(nombreEquipo));
-    }
-    
-    public boolean agregarJugadorEquipo(Jugador jugador){
-        return Jugadores.add(jugador);
-    }
+//        for (Jugador jug : Jugadores) {
+//            System.out.println(" - " + jug.getNombre() + " (ID: " + jug.getId() + " / Rut: " + jug.getRut() + " / Sexo: " + jug.getSexo() + " / Edad: " + jug.getEdad() +equi.getNombreEquipo()+")");
+////            System.out.println("El equipo es"+equi.getNombreEquipo());
+//        }
+//    }
+//
+//    public boolean agregarEquipo(String nombreEquipo) {
+//        return equipos.add(new Equipo(nombreEquipo));
+//    }
+//    
+//    public boolean agregarJugadorEquipo(Jugador jugador){
+//        return Jugadores.add(jugador);
+//    }
    
 //    public boolean asignarJugadorEquipo(Jugador jugador){
 //        return equipos.add(Jugadores);
