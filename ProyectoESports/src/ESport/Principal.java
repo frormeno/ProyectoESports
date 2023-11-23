@@ -11,8 +11,6 @@ public class Principal {
 
     public static void main(String[] args) throws Exception {
 
-
-        
         Equipo equi = new Equipo();
         Metodo met = new Metodo();
         Scanner print = new Scanner(System.in);
@@ -40,40 +38,27 @@ public class Principal {
                     met.actualizarEquipo();
 
                     break;
-//                case 4:
-//
-//                    col.listarJugador();
-//                    System.out.println("Ingrese el nombre del jugador que desea asignar a un equipo: ");
-//                    String nombreJugador = print.next();
-//
-//                    Jugador eleccionJugador = null;
-//                    for (Jugador jugador : col.getJugadores()) {
-//                        if (jugador.getNombre() == nombreJugador) {
-//                            eleccionJugador = jugador;
-//                            System.out.println("Jugador seleccionado" + jugador);
-//                            break;
-//                        }
-//                    }
-//
-//                    col.mostrarEquipo();
-//                    System.out.println("Ingrese el nombre del equipo al que desea asignar el jugador: ");
-//                    String equipoNombre = print.next();
-//
-//                    Equipo eleccionEquipo = null;
-//                    for (Equipo equipo : col.getEquipos()) {
-//                        if (equipo.getNombreEquipo().equals(equipoNombre)) {
-//                            eleccionEquipo = equipo;
-//
-//                            col.asignarJugadorAEquipo(eleccionJugador, eleccionEquipo);
-//                            System.out.println("Jugador asignado al equipo correctamente.");
-//                            break;
-//                        }
-//                    }
-//                    break;
-//
-//                case 5:
-//                    col.mostrarEquipo();
-//                    break;
+                case 4:
+                    met.agregarJugadorAEquipo();
+
+                    break;
+
+                case 5:
+                    met.actualizarJugador();
+                    break;
+
+                case 6:
+                    met.eliminarJugador();
+                    break;
+                    case 7:
+                    met.eliminarEquipo();
+                    break;
+                    case 8:
+                    met.mostrarEquipo();
+                    break;
+                    case 9:
+                    met.mostrarJugador();
+                    break;
 //                case 6:
 //                    System.out.println("¡Hasta pronto!");
 //                    System.exit(0);
@@ -81,6 +66,7 @@ public class Principal {
 //                    System.out.println("Opción no válida.");
 //            }
 //        }
+            }
+        }
     }
-         }    
- } }
+}
