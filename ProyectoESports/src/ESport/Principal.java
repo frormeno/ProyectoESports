@@ -59,6 +59,9 @@ public class Principal {
                     case 9:
                     met.mostrarJugador();
                     break;
+                    case 10:
+                    met.mostrarEquipoJug();
+                    break;
 //                case 6:
 //                    System.out.println("¡Hasta pronto!");
 //                    System.exit(0);

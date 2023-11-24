@@ -253,6 +253,24 @@ public class Metodo {
         }
     }        
 
+        public static void mostrarEquipoJug() throws Exception {
+        String sql = "SELECT R.ID_EQUIPO, E.NOMBRE_EQUIPO, R.ID_JUGADOR, J.NOMBRE_JUGADOR FROM  REGISTRO_EQUIPO R JOIN EQUIPO E ON (R.ID_EQUIPO=E.ID_EQUIPO) JOIN JUGADOR J ON (R.ID_JUGADOR=J.ID_JUGADOR) GROUP BY R.ID_EQUIPO,E.NOMBRE_EQUIPO,R.ID_JUGADOR,J.NOMBRE_JUGADOR";
+        try (Connection connection = Conexion.obtenerConexion();
+             PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            while (resultSet.next()) {
+                int id_equipo = resultSet.getInt("ID_EQUIPO");
+                String nombre_equipo = resultSet.getString("NOMBRE_EQUIPO");
+                int id_jugador = resultSet.getInt("ID_JUGADOR");
+                String nombre_jugador= resultSet.getString("NOMBRE_JUGADOR");
+                System.out.println("ID del equipo: " + id_equipo + ", NOMBRE DEL EQUIPO: "+ nombre_equipo+" ID DEL JUGADOR: "+ id_jugador+ " NOMBRE DEL JUGADOR: "+ nombre_jugador);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al obtener la lista de Jugadores: " + e.getMessage());
+        }
+    }
 }
 
 //     public void buscarEquipo(String nombreEquipo, List<Equipo> equipos) {
