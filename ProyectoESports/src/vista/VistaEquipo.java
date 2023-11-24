@@ -56,6 +56,11 @@ public class VistaEquipo extends javax.swing.JFrame {
         jbtn_eliminar_equipo.setText("ELIMINAR EQUIPO");
 
         jbtn_volver.setText("VOLVER");
+        jbtn_volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_volverActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Ingrese el nombre del equipo que desea crear.");
 
@@ -86,8 +91,7 @@ public class VistaEquipo extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(80, 80, 80)
-                                .addComponent(jbtn_modificar_equipo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jbtn_modificar_equipo))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(17, 17, 17)
                                 .addComponent(jTextField2))))
@@ -174,6 +178,12 @@ public class VistaEquipo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbtn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_volverActionPerformed
+     VistaInicio mForm4 = new VistaInicio();
+        mForm4.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbtn_volverActionPerformed
 
     /**
      * @param args the command line arguments
