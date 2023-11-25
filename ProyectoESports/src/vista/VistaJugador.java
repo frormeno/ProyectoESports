@@ -60,8 +60,18 @@ public class VistaJugador extends javax.swing.JFrame {
         });
 
         jbtn_buscar_jugador.setText("BUSCAR JUGADOR");
+        jbtn_buscar_jugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_buscar_jugadorActionPerformed(evt);
+            }
+        });
 
         jbtn_eliminar_jugador.setText("ELIMINAR JUGADOR");
+        jbtn_eliminar_jugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_eliminar_jugadorActionPerformed(evt);
+            }
+        });
 
         jbtn_volver.setText("VOLVER");
         jbtn_volver.addActionListener(new java.awt.event.ActionListener() {
@@ -82,36 +92,34 @@ public class VistaJugador extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(275, 275, 275)
-                .addComponent(jbtn_volver)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(69, 69, 69)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jbtn_buscar_jugador)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbtn_eliminar_jugador))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jbtn_crear)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
-                        .addComponent(jbtn_modificar_jugador)))
-                .addGap(99, 99, 99))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbtn_crear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtn_buscar_jugador, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbtn_modificar_jugador, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                    .addComponent(jbtn_eliminar_jugador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(76, 76, 76))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(242, 242, 242)
+                .addComponent(jbtn_volver, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(84, 84, 84)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtn_crear)
-                    .addComponent(jbtn_modificar_jugador))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                    .addComponent(jbtn_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_modificar_jugador, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtn_buscar_jugador)
-                    .addComponent(jbtn_eliminar_jugador))
-                .addGap(102, 102, 102)
-                .addComponent(jbtn_volver)
-                .addGap(39, 39, 39))
+                    .addComponent(jbtn_eliminar_jugador, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_buscar_jugador, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(jbtn_volver, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -146,6 +154,15 @@ public class VistaJugador extends javax.swing.JFrame {
         VistaModificarJugador mForm6 = new VistaModificarJugador();
         mForm6.setVisible(true);
     }//GEN-LAST:event_jbtn_modificar_jugadorActionPerformed
+
+    private void jbtn_buscar_jugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_buscar_jugadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtn_buscar_jugadorActionPerformed
+
+    private void jbtn_eliminar_jugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_eliminar_jugadorActionPerformed
+         VistaEliminarJugador mForm7 = new VistaEliminarJugador();
+        mForm7.setVisible(true);
+    }//GEN-LAST:event_jbtn_eliminar_jugadorActionPerformed
 
     /**
      * @param args the command line arguments

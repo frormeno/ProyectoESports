@@ -67,26 +67,23 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
-                  <Component id="jbtn_volver" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jbtn_buscar_jugador" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jbtn_eliminar_jugador" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="jbtn_crear" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="174" max="32767" attributes="0"/>
-                          <Component id="jbtn_modificar_jugador" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jbtn_crear" max="32767" attributes="0"/>
+                      <Component id="jbtn_buscar_jugador" pref="197" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                  <EmptySpace pref="75" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jbtn_modificar_jugador" pref="195" max="32767" attributes="0"/>
+                      <Component id="jbtn_eliminar_jugador" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="242" max="-2" attributes="0"/>
+                  <Component id="jbtn_volver" min="-2" pref="126" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,17 +92,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbtn_crear" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbtn_modificar_jugador" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbtn_crear" alignment="3" min="-2" pref="96" max="-2" attributes="0"/>
+                      <Component id="jbtn_modificar_jugador" alignment="3" min="-2" pref="96" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="114" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbtn_buscar_jugador" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbtn_eliminar_jugador" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbtn_eliminar_jugador" alignment="3" min="-2" pref="98" max="-2" attributes="0"/>
+                      <Component id="jbtn_buscar_jugador" alignment="3" min="-2" pref="98" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                  <Component id="jbtn_volver" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                  <Component id="jbtn_volver" min="-2" pref="56" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -123,11 +120,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="BUSCAR JUGADOR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn_buscar_jugadorActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbtn_eliminar_jugador">
           <Properties>
             <Property name="text" type="java.lang.String" value="ELIMINAR JUGADOR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtn_eliminar_jugadorActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbtn_volver">
           <Properties>
