@@ -37,19 +37,11 @@ public class VistaJugador extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
-        jbtn_crear_jugador = new javax.swing.JButton();
         jbtn_modificar_jugador = new javax.swing.JButton();
         jbtn_buscar_jugador = new javax.swing.JButton();
         jbtn_eliminar_jugador = new javax.swing.JButton();
         jbtn_volver = new javax.swing.JButton();
-        jtxt_rut = new javax.swing.JTextField();
-        jtxt_apaterno = new javax.swing.JTextField();
-        jtxt_edad = new javax.swing.JTextField();
-        jtxt_nombre = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jbtn_crear = new javax.swing.JButton();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -60,14 +52,12 @@ public class VistaJugador extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setForeground(new java.awt.Color(153, 153, 153));
 
-        jbtn_crear_jugador.setText("CREAR JUGADOR");
-        jbtn_crear_jugador.addActionListener(new java.awt.event.ActionListener() {
+        jbtn_modificar_jugador.setText("MODIFICAR JUGADOR");
+        jbtn_modificar_jugador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtn_crear_jugadorActionPerformed(evt);
+                jbtn_modificar_jugadorActionPerformed(evt);
             }
         });
-
-        jbtn_modificar_jugador.setText("MODIFICAR JUGADOR");
 
         jbtn_buscar_jugador.setText("BUSCAR JUGADOR");
 
@@ -80,25 +70,12 @@ public class VistaJugador extends javax.swing.JFrame {
             }
         });
 
-        jtxt_rut.addActionListener(new java.awt.event.ActionListener() {
+        jbtn_crear.setText("CREAR JUGADOR");
+        jbtn_crear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxt_rutActionPerformed(evt);
+                jbtn_crearActionPerformed(evt);
             }
         });
-
-        jtxt_nombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtxt_nombreActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Nombre:");
-
-        jLabel2.setText("Apellido:");
-
-        jLabel3.setText("Edad:");
-
-        jLabel4.setText("Rut:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -109,63 +86,30 @@ public class VistaJugador extends javax.swing.JFrame {
                 .addComponent(jbtn_volver)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                .addGap(69, 69, 69)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbtn_buscar_jugador)
-                            .addComponent(jbtn_crear_jugador))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jbtn_eliminar_jugador)
-                                .addGap(119, 119, 119))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jbtn_modificar_jugador)
-                                .addGap(49, 49, 49))))
+                        .addComponent(jbtn_buscar_jugador)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbtn_eliminar_jugador))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtxt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtxt_apaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtxt_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtxt_rut, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(jbtn_crear)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
+                        .addComponent(jbtn_modificar_jugador)))
+                .addGap(99, 99, 99))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(84, 84, 84)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtxt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtxt_apaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtxt_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtxt_rut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtn_crear_jugador)
+                    .addComponent(jbtn_crear)
                     .addComponent(jbtn_modificar_jugador))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbtn_buscar_jugador)
                     .addComponent(jbtn_eliminar_jugador))
-                .addGap(49, 49, 49)
+                .addGap(102, 102, 102)
                 .addComponent(jbtn_volver)
                 .addGap(39, 39, 39))
         );
@@ -174,7 +118,10 @@ public class VistaJugador extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,43 +131,21 @@ public class VistaJugador extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbtn_crear_jugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_crear_jugadorActionPerformed
-        try (Connection connection = Conexion.obtenerConexion()) {
-            String sql = "INSERT INTO JUGADOR (ID_JUGADOR, NOMBRE_JUGADOR,APPATERNO_JUGADOR,EDAD_JUGADOR,RUT_JUGADOR) VALUES (SEQ_JUGADOR.NEXTVAL, ?, ?, ?, ?)";
-            PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1,  jtxt_nombre.getText());
-            statement.setString(2, jtxt_apaterno.getText());
-            statement.setInt(3, Integer.parseInt(jtxt_edad.getText()));
-            statement.setString(4, jtxt_rut.getText());            
-            
-            statement.executeUpdate();
-
-            System.out.println("Jugador añadido correctamente.");
-            
-        } catch (SQLException e) {
-            System.err.println("Error al agregar el jugador: " + e.getMessage());
-        } catch (Exception ex) {
-            Logger.getLogger(VistaJugador.class.getName()).log(Level.SEVERE, null, ex);
-        } 
-            // TODO add your handling code here:
-            
-        
-    }//GEN-LAST:event_jbtn_crear_jugadorActionPerformed
-
-    private void jtxt_rutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxt_rutActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jtxt_rutActionPerformed
-
-    private void jtxt_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxt_nombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtxt_nombreActionPerformed
-
     private void jbtn_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_volverActionPerformed
-       VistaInicio mForm1 = new VistaInicio();
+        VistaInicio mForm1 = new VistaInicio();
         mForm1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jbtn_volverActionPerformed
+
+    private void jbtn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_crearActionPerformed
+        VistaCrearJugador mForm1 = new VistaCrearJugador();
+        mForm1.setVisible(true);
+    }//GEN-LAST:event_jbtn_crearActionPerformed
+
+    private void jbtn_modificar_jugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_modificar_jugadorActionPerformed
+        VistaModificarJugador mForm6 = new VistaModificarJugador();
+        mForm6.setVisible(true);
+    }//GEN-LAST:event_jbtn_modificar_jugadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,21 +183,13 @@ public class VistaJugador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton jbtn_buscar_jugador;
-    private javax.swing.JButton jbtn_crear_jugador;
+    private javax.swing.JButton jbtn_crear;
     private javax.swing.JButton jbtn_eliminar_jugador;
     private javax.swing.JButton jbtn_modificar_jugador;
     private javax.swing.JButton jbtn_volver;
-    private javax.swing.JTextField jtxt_apaterno;
-    private javax.swing.JTextField jtxt_edad;
-    private javax.swing.JTextField jtxt_nombre;
-    private javax.swing.JTextField jtxt_rut;
     // End of variables declaration//GEN-END:variables
 }
