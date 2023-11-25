@@ -133,19 +133,16 @@ public class VistaEquipo extends javax.swing.JFrame {
     private void jbtn_crear_equipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_crear_equipoActionPerformed
      VistaCrearEquipo mForm8 = new VistaCrearEquipo();
         mForm8.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jbtn_crear_equipoActionPerformed
 
     private void jbtn_eliminar_equipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_eliminar_equipoActionPerformed
            VistaEliminarEquipo mForm9 = new VistaEliminarEquipo();
         mForm9.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jbtn_eliminar_equipoActionPerformed
 
     private void jbtn_modificar_equipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_modificar_equipoActionPerformed
              VistaModificarEquipo mForm10 = new VistaModificarEquipo();
         mForm10.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_jbtn_modificar_equipoActionPerformed
 
     /**

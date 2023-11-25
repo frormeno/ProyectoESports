@@ -50,7 +50,7 @@ public class VistaModificarJugador extends javax.swing.JFrame {
         jtxt_modificar_rut_jugador = new javax.swing.JTextField();
         jbtn_modificar_jugador = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(102, 204, 255));
 

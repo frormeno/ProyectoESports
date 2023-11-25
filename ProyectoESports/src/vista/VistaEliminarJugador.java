@@ -40,7 +40,7 @@ public class VistaEliminarJugador extends javax.swing.JFrame {
         jtxt_eliminar_jugador = new javax.swing.JTextField();
         jbtn_eliminar_jugador = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 204, 255));
 
