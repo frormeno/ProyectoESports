@@ -8,12 +8,12 @@ package vista;
  *
  * @author Julian
  */
-public class VistaBuscarEquipo extends javax.swing.JFrame {
+public class VistaBuscarJugador extends javax.swing.JFrame {
 
     /**
      * Creates new form VistaBuscarEquipo
      */
-    public VistaBuscarEquipo() {
+    public VistaBuscarJugador() {
         initComponents();
     }
 
@@ -41,7 +41,7 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 12)); // NOI18N
-        jLabel1.setText(" Buscar Equipo");
+        jLabel1.setText(" Buscar Jugador");
         jLabel1.setMaximumSize(new java.awt.Dimension(272, 22));
         jLabel1.setMinimumSize(new java.awt.Dimension(272, 22));
         jLabel1.setPreferredSize(new java.awt.Dimension(272, 22));
@@ -65,17 +65,17 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "NOMBRE", "INTEGRANTE"
+                "ID", "NOMBRE", "APELLIDO", "EDAD", "RUT"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -131,8 +131,8 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    VistaEquipo mForm9 = new VistaEquipo();
-        mForm9.setVisible(true);
+    VistaJugador mForm10 = new VistaJugador();
+        mForm10.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -161,21 +161,6 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VistaBuscarEquipo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

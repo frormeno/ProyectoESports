@@ -157,7 +157,9 @@ public class VistaJugador extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtn_modificar_jugadorActionPerformed
 
     private void jbtn_buscar_jugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_buscar_jugadorActionPerformed
-        // TODO add your handling code here:
+    VistaBuscarJugador mForm12 = new VistaBuscarJugador();
+        mForm12.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbtn_buscar_jugadorActionPerformed
 
     private void jbtn_eliminar_jugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_eliminar_jugadorActionPerformed

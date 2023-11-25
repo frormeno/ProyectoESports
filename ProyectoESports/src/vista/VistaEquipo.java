@@ -53,6 +53,11 @@ public class VistaEquipo extends javax.swing.JFrame {
         });
 
         jbtn_buscar_equipo.setText("BUSCAR EQUIPO");
+        jbtn_buscar_equipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_buscar_equipoActionPerformed(evt);
+            }
+        });
 
         jbtn_eliminar_equipo.setText("ELIMINAR EQUIPO");
         jbtn_eliminar_equipo.addActionListener(new java.awt.event.ActionListener() {
@@ -139,6 +144,12 @@ public class VistaEquipo extends javax.swing.JFrame {
              VistaModificarEquipo mForm10 = new VistaModificarEquipo();
         mForm10.setVisible(true);
     }//GEN-LAST:event_jbtn_modificar_equipoActionPerformed
+
+    private void jbtn_buscar_equipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_buscar_equipoActionPerformed
+    VistaBuscarEquipo mForm11 = new VistaBuscarEquipo();
+        mForm11.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbtn_buscar_equipoActionPerformed
 
     /**
      * @param args the command line arguments

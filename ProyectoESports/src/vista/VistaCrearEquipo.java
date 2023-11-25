@@ -135,7 +135,7 @@ public class VistaCrearEquipo extends javax.swing.JFrame {
 
     private void jbtn_crear_equipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_crear_equipoActionPerformed
         try (Connection connection = Conexion.obtenerConexion()) {
-            String sql = "INSERT INTO EQUIPO (ID_EQUIPO, NOMBRE_EQUIPO) VALUES (EQUIPO1_SEQ.NEXTVAL, ?)";
+            String sql = "INSERT INTO EQUIPO (ID_EQUIPO, NOMBRE_EQUIPO) VALUES (SEQ_EQUIPO.NEXTVAL, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, jtxt_nombre_crear_equipo.getText());
             statement.executeUpdate();
