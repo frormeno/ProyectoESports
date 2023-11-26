@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package vista;
 
 import Conexion.Conexion;
@@ -40,7 +36,6 @@ public class VistaBuscarJugador extends javax.swing.JFrame {
         try (Connection connection = Conexion.obtenerConexion();
              PreparedStatement statement = connection.prepareStatement(sql);
              ResultSet resultSet = statement.executeQuery()) {
-
             while (resultSet.next()) {
                 datos[0] = String.valueOf(resultSet.getInt(1));
                 datos[1]=resultSet.getString(2);         
@@ -171,8 +166,8 @@ public class VistaBuscarJugador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
      
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    VistaJugador mForm10 = new VistaJugador();
-        mForm10.setVisible(true);
+    VistaJugador mForm11 = new VistaJugador();
+        mForm11.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

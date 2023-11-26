@@ -4,15 +4,44 @@
  */
 package vista;
 
+import Conexion.Conexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Julian
  */
 public class VistaBuscarEquipo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaBuscarEquipo
-     */
+   public void mostrar(String tabla) throws Exception{
+       DefaultTableModel model = new DefaultTableModel();
+       model.addColumn ("ID EQUIPO");
+       model.addColumn ("NOMBRE EQUIPO");
+       model.addColumn ("ID JUGADOR");
+       model.addColumn ("NOMBRE JUGADOR");
+       jtbl_equipo.setModel(model);
+       String [] datos = new String [4];
+       String sql = "SELECT R.ID_EQUIPO, E.NOMBRE_EQUIPO, R.ID_JUGADOR, J.NOMBRE_JUGADOR FROM  REGISTRO_EQUIPO R JOIN EQUIPO E ON (R.ID_EQUIPO=E.ID_EQUIPO) JOIN JUGADOR J ON (R.ID_JUGADOR=J.ID_JUGADOR) GROUP BY R.ID_EQUIPO,E.NOMBRE_EQUIPO,R.ID_JUGADOR,J.NOMBRE_JUGADOR"+tabla;
+        try (Connection connection = Conexion.obtenerConexion();
+             PreparedStatement statement = connection.prepareStatement(sql);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            while (resultSet.next()) {
+                datos[0] = String.valueOf(resultSet.getInt(1));
+                datos[1]=resultSet.getString(2);         
+                datos[2] = String.valueOf(resultSet.getInt(3));
+                datos[4]=resultSet.getString(4);   
+                model.addRow(datos);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al obtener la lista de Jugadores: " + e.getMessage());
+        }
+   }
     public VistaBuscarEquipo() {
         initComponents();
     }
@@ -30,7 +59,7 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtbl_equipo = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -52,7 +81,7 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(129, 129, 129)
+                .addGap(132, 132, 132)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -61,7 +90,7 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtbl_equipo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -80,7 +109,7 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtbl_equipo);
 
         jButton1.setText("VOLVER");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +118,7 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("jButton2");
+        jButton2.setText("ACTUALIZAR LISTA");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -110,7 +139,7 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
                         .addComponent(jButton1)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(232, 232, 232)
+                .addGap(194, 194, 194)
                 .addComponent(jButton2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -208,6 +237,6 @@ public class VistaBuscarEquipo extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jtbl_equipo;
     // End of variables declaration//GEN-END:variables
 }
