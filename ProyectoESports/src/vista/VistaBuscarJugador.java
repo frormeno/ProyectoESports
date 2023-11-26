@@ -181,7 +181,7 @@ public class VistaBuscarJugador extends javax.swing.JFrame {
         model.addColumn("RUT");
         jtbl_jugador.setModel(model);
 //       ArrayList datos = new ArrayList();
-        String sql = "SELECT * FROM JUGADOR";
+        String sql = "SELECT ID_JUGADOR,NOMBRE_JUGADOR,APPATERNO_JUGADOR,EDAD_JUGADOR,RUT_JUGADOR FROM JUGADOR";
         try (Connection connection = Conexion.obtenerConexion(); PreparedStatement statement = connection.prepareStatement(sql); ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
                 int ID_JUGADOR = resultSet.getInt("ID_JUGADOR");
