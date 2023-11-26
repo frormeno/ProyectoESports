@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -23,32 +24,31 @@ public class VistaBuscarJugador extends javax.swing.JFrame {
         initComponents();
     }
 
-   public void mostrar(String tabla) throws Exception{
-       DefaultTableModel model = new DefaultTableModel();
-       model.addColumn ("ID");
-       model.addColumn ("NOMBRE");
-       model.addColumn ("APELLIDO");
-       model.addColumn ("EDAD");
-       model.addColumn ("RUT");
-       jtbl_jugador.setModel(model);
-       String [] datos = new String [5];
-       String sql = "SELECT * FROM JUGADOR"+tabla;
-        try (Connection connection = Conexion.obtenerConexion();
-             PreparedStatement statement = connection.prepareStatement(sql);
-             ResultSet resultSet = statement.executeQuery()) {
+    public void mostrar() throws Exception {
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("ID");
+        model.addColumn("NOMBRE");
+        model.addColumn("APELLIDO");
+        model.addColumn("EDAD");
+        model.addColumn("RUT");
+        jtbl_jugador.setModel(model);
+//       ArrayList datos = new ArrayList();
+        String sql = "SELECT * FROM JUGADOR";
+        try (Connection connection = Conexion.obtenerConexion(); PreparedStatement statement = connection.prepareStatement(sql); ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
-                datos[0] = String.valueOf(resultSet.getInt(1));
-                datos[1]=resultSet.getString(2);         
-                datos[2]=resultSet.getString(3); 
-                datos[3] = String.valueOf(resultSet.getInt(4));
-                datos[4]=resultSet.getString(5);
-                model.addRow(datos);
+                int id = resultSet.getInt("ID_JUGADOR");
+                String nombre = resultSet.getString("NOMBRE_JUGADOR");
+                String apellido = resultSet.getString("APPATERNO_JUGADOR");
+                int edad = resultSet.getInt("EDAD_JUGADOR");
+                String rut = resultSet.getString("RUT_JUGADOR");
+                model.addRow(new Object[]{id, nombre, apellido, edad, rut});
             }
 
         } catch (SQLException e) {
             System.err.println("Error al obtener la lista de Jugadores: " + e.getMessage());
         }
-   }
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -93,13 +93,13 @@ public class VistaBuscarJugador extends javax.swing.JFrame {
 
         jtbl_jugador.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {},
-                {},
-                {},
-                {}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
             }
         ));
         jScrollPane1.setViewportView(jtbl_jugador);
@@ -164,15 +164,40 @@ public class VistaBuscarJugador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-     
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    VistaJugador mForm11 = new VistaJugador();
+        VistaJugador mForm11 = new VistaJugador();
         mForm11.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jbtn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_buscarActionPerformed
-        
+
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("ID");
+        model.addColumn("NOMBRE");
+        model.addColumn("APELLIDO");
+        model.addColumn("EDAD");
+        model.addColumn("RUT");
+        jtbl_jugador.setModel(model);
+//       ArrayList datos = new ArrayList();
+        String sql = "SELECT * FROM JUGADOR";
+        try (Connection connection = Conexion.obtenerConexion(); PreparedStatement statement = connection.prepareStatement(sql); ResultSet resultSet = statement.executeQuery()) {
+            while (resultSet.next()) {
+                int ID_JUGADOR = resultSet.getInt("ID_JUGADOR");
+                String NOMBRE_JUGADOR = resultSet.getString("NOMBRE_JUGADOR");
+                String APPATERNO_JUGADOR = resultSet.getString("APPATERNO_JUGADOR");
+                int EDAD_JUGADOR = resultSet.getInt("EDAD_JUGADOR");
+                String RUT_JUGADOR = resultSet.getString("RUT_JUGADOR");
+                model.addRow(new Object[]{ID_JUGADOR, NOMBRE_JUGADOR, APPATERNO_JUGADOR, EDAD_JUGADOR, RUT_JUGADOR});
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error al obtener la lista de Jugadores: " + e.getMessage());
+        } catch (Exception ex) {
+            Logger.getLogger(VistaBuscarJugador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_jbtn_buscarActionPerformed
 
     /**
